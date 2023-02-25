@@ -1,0 +1,46 @@
+//
+echo "HELLO"
+
+//
+for i in {1..100..2}
+do
+    echo "$i"
+done
+
+//
+read name
+echo "Welcome ${name}"
+
+//
+for i in {1..50}
+do
+echo "$i"
+done
+
+//
+read x
+read y
+echo $((x+y))
+echo $((x-y))
+echo $((x*y))
+echo $((x/y))
+
+//
+read x
+read y
+if [ $x -gt $y ]
+then echo "X is greater than Y"
+elif [ $x -lt $y ]
+then echo "X is less than Y"
+else
+echo "X is equal to Y"
+fi
+
+//
+read i
+if [ "$i" == "y" ]||[ "$i" == "Y" ]; then
+echo "YES"
+else
+echo "NO"
+fi
+
