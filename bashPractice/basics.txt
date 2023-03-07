@@ -79,3 +79,18 @@ awk '{if (NF!=4) print "Not all scores are available for " $1}'
 
 #!/bin/bash
 awk '{ if ($2 >= 50 && $3 >= 50 && $4 >= 50) print $1 " : Pass"; else print $1 " : Fail" }'
+Sample Input
+
+A 25 27 50
+B 35 37 75
+C 75 78 80
+D 99 88 76
+Sample Output
+
+A : Fail
+B : Fail
+C : Pass
+D : Pass
+Explanation
+
+Only student C and student D have scored >=50 in all three subjects.
