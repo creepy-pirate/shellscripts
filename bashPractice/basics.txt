@@ -136,3 +136,28 @@ A scored an average less than 50 => FAIL Same for B C scored an average between 
 D scored an average between 80 and 90 => A
 
 //
+#!/bin/bash
+awk '
+    BEGIN {count=0}
+    
+    {
+        printf "%s %d %d %d", $1, $2, $3, $4
+        count++;
+        if (count%2 == 0)
+            printf "\n"  
+        else
+            printf ";"
+    }
+'
+
+A 25 27 50
+B 35 37 75
+C 75 78 80
+D 99 88 76 
+Sample Output
+
+A 25 27 50;B 35 37 75
+C 75 78 80;D 99 88 76 
+Explanation
+
+Every pair of lines have been concatenated with a semi-colon.
