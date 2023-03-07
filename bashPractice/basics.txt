@@ -62,3 +62,8 @@ Match one digit \d and put it in a capturing group (), then 0 to any number * of
 //
 sed 's/[Tt]hy/{&}/g'
 &[ambersand] will hold the old string value and g is for globally
+
+
+//
+grep -w 'the'
+grep -i " the "
