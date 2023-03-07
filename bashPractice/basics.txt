@@ -53,3 +53,9 @@ printf "%.3f" $reslt
 //
 grep -iw "the\|that\|then\|those"
 
+
+//
+grep '\(\d\) \?\1'
+#The regexp (\d) *\1 works perfectly.
+Match one digit \d and put it in a capturing group (), then 0 to any number * of spaces , then something that is the same than the first capturing group \1
+
