@@ -59,3 +59,6 @@ grep '\(\d\) \?\1'
 #The regexp (\d) *\1 works perfectly.
 Match one digit \d and put it in a capturing group (), then 0 to any number * of spaces , then something that is the same than the first capturing group \1
 
+//
+sed 's/[Tt]hy/{&}/g'
+&[ambersand] will hold the old string value and g is for globally
