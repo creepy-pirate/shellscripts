@@ -94,3 +94,45 @@ D : Pass
 Explanation
 
 Only student C and student D have scored >=50 in all three subjects.
+
+
+//
+awk '
+{   printf "%s : ", $0
+    sum = 0
+    for(i=2;i<=NF;i++){
+        sum += $i
+    }
+    avg=sum/(NF-1)
+    if(avg>=80){
+        printf "A\n"
+    }
+    else if(avg >=60 && avg <80){
+        printf "B\n"
+    }
+    else if(avg>=50 && avg<60){
+        printf "C\n"
+    }
+    else {
+        printf "FAIL\n"
+    }
+}'
+
+Sample Input
+
+A 25 27 50
+B 35 37 75
+C 75 78 80
+D 99 88 76
+Sample Output
+
+A 25 27 50 : FAIL
+B 35 37 75 : FAIL
+C 75 78 80 : B
+D 99 88 76 : A
+Explanation
+
+A scored an average less than 50 => FAIL Same for B C scored an average between 60 and 80 => B
+D scored an average between 80 and 90 => A
+
+//
