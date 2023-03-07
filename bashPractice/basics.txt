@@ -67,3 +67,6 @@ sed 's/[Tt]hy/{&}/g'
 //
 grep -w 'the'
 grep -i " the "
+
+//
+grep -ivw 'that'
